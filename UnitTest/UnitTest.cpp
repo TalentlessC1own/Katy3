@@ -10,8 +10,8 @@
 #include "../Katy3/ShellSort.cpp"
 #include "../Katy3/QuickSort.h"
 #include "../Katy3/QuickSort.cpp"
-#include "..\Katy3\ColumSum.h"
-#include "..\Katy3\ColumSum.cpp"
+#include "..\Katy3\DigitsSum.h"
+#include "..\Katy3\DigitsSum.cpp"
 #include "CppUnitTest.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -27,15 +27,15 @@ namespace UnitTest
 		ShellSort shellSort;
 		QuickSort quickSort;
 		
-		std::vector <ColumSum> start = { ColumSum(4,0),ColumSum(3,1) ,ColumSum(2,2) ,ColumSum(1,3) };
+		std::vector <DigitsSum> start = { DigitsSum(0,0,4),DigitsSum(1,0,3) ,DigitsSum(2,0,2) ,DigitsSum(3,0,1) };
 
-		std::vector<int> result = { 1,2,3,4 };
+		std::vector<int> result = { 4,3,2,1 };
 
 
 
 	public:
 
-		std::vector<int> Ñrutch(std::vector <ColumSum> something)
+		std::vector<int> Ñrutch(std::vector <DigitsSum> something)
 		{
 			std::vector<int> arr;
 			for (int i = 0; i < result.size(); i++)
@@ -47,7 +47,7 @@ namespace UnitTest
 
 		TEST_METHOD(BubleTest)
 		{
-			std::vector <ColumSum> temp = start;
+			std::vector <DigitsSum> temp = start;
 			bubleSort.Sort(temp, static_cast<int>(temp.size()));
 			for (size_t i = 0; i < temp.size(); i++)
 			{
@@ -59,7 +59,7 @@ namespace UnitTest
 
 		TEST_METHOD(InsertionTest)
 		{
-			std::vector<ColumSum> temp = start;
+			std::vector<DigitsSum> temp = start;
 			insertionSort.Sort(temp, static_cast<int>(temp.size()));
 			Assert::IsTrue(Ñrutch(temp) == result);
 
@@ -67,7 +67,7 @@ namespace UnitTest
 
 		TEST_METHOD(SelectionTest)
 		{
-			std::vector <ColumSum> temp = start;
+			std::vector <DigitsSum> temp = start;
 			selectionSort.Sort(temp, static_cast<int>(temp.size()));
 			Assert::IsTrue(Ñrutch(temp) == result);
 
@@ -75,7 +75,7 @@ namespace UnitTest
 
 		TEST_METHOD(ShellTest)
 		{
-			std::vector <ColumSum> temp = start;
+			std::vector <DigitsSum> temp = start;
 			shellSort.Sort(temp, static_cast<int>(temp.size()));
 			Assert::IsTrue(Ñrutch(temp) == result);
 
@@ -83,7 +83,7 @@ namespace UnitTest
 
 		TEST_METHOD(QuickTest)
 		{
-			std::vector <ColumSum> temp = start;
+			std::vector <DigitsSum> temp = start;
 			quickSort.Sort(temp, static_cast<int>(temp.size()));
 			Assert::IsTrue(Ñrutch(temp) == result);
 
