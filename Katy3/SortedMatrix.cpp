@@ -25,7 +25,7 @@ std::vector<std::vector<DigitsSum>> SortedMatrix::GetDigitSum(std::vector<std::v
 {
 	int counter = 0;
 	std::vector<std::vector<DigitsSum>> tmp;
-	for (int i = 0; i < numberOfColums; i+=2)
+	for (int i = 1; i < numberOfColums; i+=2)
 	{
 		
 		tmp.push_back(std::vector<DigitsSum>{});
