@@ -8,7 +8,7 @@ public:
 
 	void PrintCounters() override;
 
-	void Sort(std::vector<ColumSum>& arr, int size) override;
+	void Sort(std::vector<DigitsSum>& arr, int size) override;
 
 	
 };

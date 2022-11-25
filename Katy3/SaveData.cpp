@@ -75,15 +75,6 @@ void SaveData(std::vector<std::shared_ptr<ISort>>& sortsCase, std::vector < std:
 		FileRecorder << std::endl;
 	}
 
-	FileRecorder << "Sorted odd lines" << std::endl;
-	for (int i = 0; i < sortsMatrices[0]->GetNumberOflines(); i++)
-	{
-		for (int j = 0; j < sortsMatrices[0]->GEtNumberOfColums(); j++)
-		{
-			FileRecorder << matrixColums[i][j] << "\t";
-		}
-		FileRecorder << std::endl;
-	}
 		
 	FileRecorder.close();
 }

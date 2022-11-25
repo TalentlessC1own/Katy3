@@ -6,15 +6,15 @@ void InsertionSort::PrintCounters()
 	ISort::PrintCounters();
 }
 
-void InsertionSort::Sort(std::vector<ColumSum>& arr, int size)
+void InsertionSort::Sort(std::vector<DigitsSum>& arr, int size)
 {
     for (int k = 1; k < size; k++)
     {
        
-        ColumSum temp = arr[k];
+        DigitsSum temp = arr[k];
         int j = k - 1;
         comparisonCounter++;
-        while (j >= 0 && temp.GetValue() < arr[j].GetValue())
+        while (j >= 0 && temp.GetValue() > arr[j].GetValue())
         {
             comparisonCounter++;
             swapCounter++;

@@ -54,7 +54,7 @@
     <ClInclude Include="GetColum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ColumSum.h">
+    <ClInclude Include="DigitsSum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -98,7 +98,7 @@
     <ClCompile Include="GetColum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ColumSum.cpp">
+    <ClCompile Include="DigitsSum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

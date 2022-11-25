@@ -3,7 +3,7 @@
 #include <vector>
 #include "ISort.h"
 #include "GetColum.h"
-#include "ColumSum.h"
+#include "DigitsSum.h"
 
 
 
@@ -14,10 +14,10 @@ private:
 	int numberOfColums;
 	std::vector<std::vector<int>> matrix;
 	std::vector<std::vector<int>> matrixLines;
-	std::vector<std::vector<int>> SortEvenColums(std::vector<std::vector<int>> matrix, std::shared_ptr<ISort> sort, std::vector<ColumSum> columsSums);
-	std::vector<ColumSum> columsSums;
+	std::vector<std::vector<int>> SortEvenColums(std::vector<std::vector<int>> matrix, std::shared_ptr<ISort> sort);
+	std::vector<std::vector<DigitsSum>> digitSums;
 
-	std::vector<ColumSum> GetColumSum(std::vector<std::vector<int>> matrix);
+	std::vector<std::vector<DigitsSum>> GetDigitSum(std::vector<std::vector<int>> matrix);
 	
 	
 public:
@@ -25,8 +25,8 @@ public:
 	{
 		numberOfLines = static_cast<int>(matrixValue.size());
 		numberOfColums =static_cast<int>(matrixValue[0].size());
-		columsSums = GetColumSum(matrixValue);
-		matrix = SortEvenColums(matrixValue, sort, columsSums);
+		digitSums = GetDigitSum(matrixValue);
+		matrix = SortEvenColums(matrixValue, sort);
 		
 	}
 	int GetNumberOflines();

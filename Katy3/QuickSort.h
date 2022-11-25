@@ -7,9 +7,9 @@ class QuickSort : public ISort
 public:
 	void PrintCounters() override;
 
-	void Sort(std::vector<ColumSum>& arr, int size) override;
-	void Quicksort(std::vector<ColumSum>& arr, int start, int end);
+	void Sort(std::vector<DigitsSum>& arr, int size) override;
+	void Quicksort(std::vector<DigitsSum>& arr, int start, int end);
 
-	int Partition(std::vector<ColumSum>& arr, int start, int end);
+	int Partition(std::vector<DigitsSum>& arr, int start, int end);
 };
 

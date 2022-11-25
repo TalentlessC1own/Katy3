@@ -1,31 +1,39 @@
 #include "SortedMatrix.h"
 
-std::vector<std::vector<int>> SortedMatrix::SortEvenColums(std::vector<std::vector<int>> matrixValue, std::shared_ptr<ISort> sort, std::vector<ColumSum> columsSumses)
+std::vector<std::vector<int>> SortedMatrix::SortEvenColums(std::vector<std::vector<int>> matrixValue, std::shared_ptr<ISort> sort)
 {
-	sort->Sort(columsSumses,static_cast<int>(columsSumses.size()));
-	int indexC = 0;
-	for (int i = 1; i <= numberOfColums/2; i += 2)
+	for (int i = 0;  i < digitSums.size();  i++)
 	{
-		for (int j = 0; j < numberOfLines; j++)
-			std::swap(matrixValue[j][i], matrixValue[j][columsSumses[indexC].GetIndex()]);
-		indexC++;
+		sort->Sort(digitSums[i], static_cast<int>(digitSums[i].size()));
 	}
+	int counter = 0;
+	for (int  j = 0; j < numberOfColums; j+=2)
+	{
+		
+			for (int i = 0; i < numberOfLines; i++)
+			{
 
+				matrixValue[i][j] = digitSums[counter][i].GetDigit();
+			}
+			counter++;
+	
+	}
 	return matrixValue;
 }
 
-std::vector<ColumSum> SortedMatrix::GetColumSum(std::vector<std::vector<int>> matrixValue)
+std::vector<std::vector<DigitsSum>> SortedMatrix::GetDigitSum(std::vector<std::vector<int>> matrixValue)
 {
-	int sum = 0;
-	std::vector<ColumSum> tmp;
-	for (int i = 1; i < numberOfColums; i+=2)
+	int counter = 0;
+	std::vector<std::vector<DigitsSum>> tmp;
+	for (int i = 0; i < numberOfColums; i+=2)
 	{
-		sum = 0;
+		
+		tmp.push_back(std::vector<DigitsSum>{});
 		for (int j = 0; j < numberOfLines; j++)
 		{
-			sum += matrixValue[j][i];
+			tmp[counter].emplace_back(DigitsSum(j, i, matrixValue[j][i]));
 		}
-		tmp.emplace_back(ColumSum(sum, i));
+		counter++;
 	}
 	return tmp;
 }

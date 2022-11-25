@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h" />
-    <ClInclude Include="ColumSum.h" />
+    <ClInclude Include="DigitsSum.h" />
     <ClInclude Include="GetColum.h" />
     <ClInclude Include="InitialMatrixFileOutput.h" />
     <ClInclude Include="InputCheck.h" />
@@ -144,7 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp" />
-    <ClCompile Include="ColumSum.cpp" />
+    <ClCompile Include="DigitsSum.cpp" />
     <ClCompile Include="GetColum.cpp" />
     <ClCompile Include="InitialMatrixFileOutput.cpp" />
     <ClCompile Include="InputCheck.cpp" />

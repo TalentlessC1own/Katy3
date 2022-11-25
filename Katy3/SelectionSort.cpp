@@ -6,16 +6,16 @@ void SelectionSort::PrintCounters()
 	ISort::PrintCounters();
 }
 
-void SelectionSort::Sort(std::vector<ColumSum>& arr, int size)
+void SelectionSort::Sort(std::vector<DigitsSum>& arr, int size)
 {
 	for (int i = 0; i < size - 1; i++)
 	{
-		ColumSum tmp = arr[i];
+		DigitsSum tmp = arr[i];
 		int tmpid = i;
 		for (int j = i + 1; j < size; j++)
 		{
 			comparisonCounter++;
-			if (arr[tmpid].GetValue() >  arr[j].GetValue())
+			if (arr[tmpid].GetValue() <  arr[j].GetValue())
 			{
 				tmp = arr[j];
 				tmpid = j;

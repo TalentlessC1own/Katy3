@@ -3,7 +3,7 @@
 #include <iostream>
 #include "Names.h"
 #include <vector>
-#include "ColumSum.h"
+#include "DigitsSum.h"
 
 class ISort
 {
@@ -18,7 +18,7 @@ public:
 
 	virtual void PrintCounters();
 
-	virtual void Sort(std::vector<ColumSum>& arr, int size) = 0;
+	virtual void Sort(std::vector<DigitsSum>& arr, int size) = 0;
 
 	virtual ~ISort() = default;
 
