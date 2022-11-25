@@ -7,7 +7,7 @@ std::vector<std::vector<int>> SortedMatrix::SortEvenColums(std::vector<std::vect
 		sort->Sort(digitSums[i], static_cast<int>(digitSums[i].size()));
 	}
 	int counter = 0;
-	for (int  j = 0; j < numberOfColums; j+=2)
+	for (int  j = 1; j < numberOfColums; j+=2)
 	{
 		
 			for (int i = 0; i < numberOfLines; i++)
